@@ -1,0 +1,60 @@
+footer {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: var(--primary-color);
+}
+
+footer .foot-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.a-foot {
+    text-decoration: underline;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer h3 {
+    color: var(--light-secondary-color);
+}
+
+
+.overall {
+    margin-right: 70px;
+    margin: 1rem 15rem 10px 10px;
+}
+
+.top {
+    margin-bottom: 18px;
+    width: 25rem;
+}
+
+.tele, .mail {
+    display: flex;
+    margin-bottom: 0.4rem;
+}
+
+.mail a {
+    text-decoration: underline;
+    color: var(--text-color);
+    margin-bottom: rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.gg-phone {
+    margin-right: 10px;
+}
+
+
+.gg-mail {
+    margin-right: 10px;
+    margin-top: 0.4rem;
+}
+
+.kontakt {
+    margin: 1rem 15rem 10px 10px;
+}

@@ -1,0 +1,252 @@
+.rezensions {
+    padding-top: 8rem;
+    padding-bottom: 22.5rem;
+    background-color: rgb(35, 37, 35);
+    text-align: center;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/jogging.jpg);
+    background-size: cover;
+
+}
+
+.rez-row {
+    display: flex;
+
+}
+
+.rez-row div{
+    width: 300px;
+    height: 240px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rez-row .Drake {
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+}
+
+.rez-row .Eminem {
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+}
+
+.rez-row .Kendrick {
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+}
+
+/* ----------------------------------------------------- */
+
+.collection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+    background-color: rgb(26, 26, 22);
+    padding-bottom: 20rem;
+  }
+
+.title {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+}
+
+.content-box {
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px 50px 10px 10px; /* Oben, Rechts, Unten, Links */
+    box-shadow: 0px 1px 2px rgba(255, 0, 221, 0.5), 0px 2px 4px rgba(255, 0, 221, 0.5), 0px 4px 8px rgba(255, 0, 221, 0.5), 0px 8px 16px rgba(255, 0, 221, 0.5);
+    transition: all 0.2s ease-in-out;
+}
+
+.content-box img {
+    position: relative;
+    bottom: 2.5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    right: 3rem;
+    transform: rotate(-30deg);
+    border-radius: 5px;
+    z-index: 1;
+    filter: brightness(100%);
+    clip-path: inset(230px 20px 145px 30px);
+}
+
+
+.content-box::before {
+    content: 'Nike';
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+    color: #000;
+    opacity: 0.2;
+    font-size: 10em;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    line-height: 0.8;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+}
+
+.content-box:hover::before {
+    color: rgb(0, 0, 0);
+    opacity: 0.5;
+    text-shadow: 0px 2px 2px rgba(170, 170, 170, 0.5), 0px 2px 4px rgba(170, 170, 170,0.5), 0px 4px 8px rgba(170, 170, 170,0.5), 0px 8px 16px rgba(170, 170, 170,0.5);
+
+}
+
+.content-box::after {
+    content: 'Air';
+    position: absolute;
+    bottom: 3rem;
+    right: 2.5rem;
+    color: #000;
+    opacity: 0.2;
+    font-size: 10em;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    line-height: 0.8;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+
+.content-box:hover::after {
+    color: rgb(0, 0, 0);
+    opacity: 0.5;
+    text-shadow: 0px 2px 2px rgba(170, 170, 170, 0.5), 0px 2px 4px rgba(170, 170, 170,0.5), 0px 4px 8px rgba(170, 170, 170,0.5), 0px 8px 16px rgba(170, 170, 170,0.5);
+
+}
+
+.content-box2 {
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px 10px 10px 50px; /* Oben, Rechts, Unten, Links */
+    box-shadow: 0px 1px 2px rgba(255, 0, 221, 0.5), 0px 2px 4px rgba(255, 0, 221, 0.5), 0px 4px 8px rgba(255, 0, 221, 0.5), 0px 8px 16px rgba(255, 0, 221, 0.5);
+    transition: all 0.2s ease-in-out;
+}
+
+.content-box2 img {
+    position: relative;
+    bottom: 2.5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    right: 3rem;
+    transform: rotate(-30deg);
+    border-radius: 5px;
+    z-index: 1;
+    filter: brightness(100%);
+    clip-path: inset(230px 20px 145px 30px); /* Bild Zuschneiden (Margin)*/
+}
+
+
+
+.content-box2::before {
+    content: 'Nike';
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+    color: #000;
+    opacity: 0.2;
+    font-size: 10em;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    line-height: 0.8;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+}
+
+.content-box2:hover::before {
+    color: rgb(0, 0, 0);
+    opacity: 0.5;
+    text-shadow: 0px 2px 2px rgba(170, 170, 170, 0.5), 0px 2px 4px rgba(170, 170, 170,0.5), 0px 4px 8px rgba(170, 170, 170,0.5), 0px 8px 16px rgba(170, 170, 170,0.5);
+
+}
+
+.content-box2::after {
+    content: 'Air';
+    position: absolute;
+    bottom: 3rem;
+    right: 2.5rem;
+    color: #000;
+    opacity: 0.2;
+    font-size: 10em;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    line-height: 0.8;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+
+.content-box2:hover::after {
+    color: rgb(0, 0, 0);
+    opacity: 0.5;
+    text-shadow: 0px 2px 2px rgba(170, 170, 170, 0.5), 0px 2px 4px rgba(170, 170, 170,0.5), 0px 4px 8px rgba(170, 170, 170,0.5), 0px 8px 16px rgba(170, 170, 170,0.5);
+
+}
+
+
+.content-box:hover, .content-box2:hover{
+    box-shadow: 0px 2px 4px rgba(255, 0, 221, 0.5), 
+                0px 4px 8px rgba(255, 0, 221, 0.5), 
+                0px 8px 16px rgba(255, 0, 221, 0.5), 
+                0px 12px 24px rgba(255, 0, 221, 0.5);
+    transform: translateY(-10px);
+  }
+
+.content-box:not(:hover), .content-box2:not(:hover){  /* Gleiches prinzip nur wenn der Mauseiger nicht mehr darüber ist. Pseudon. wie Before oder After geht auuch aber zu unständlich */
+    box-shadow: 0px 1px 2px rgba(255, 0, 221, 0.5), 
+                0px 2px 4px rgba(255, 0, 221, 0.5), 
+                0px 4px 8px rgba(255, 0, 221, 0.5), 
+                0px 8px 16px rgba(255, 0, 221, 0.5);
+    transform: translateY(0px);
+}
+
+
+
+
+main p {
+    min-height: 0%;
+}

@@ -1,0 +1,174 @@
+
+
+
+.nav {
+  box-sizing: border-box; /* In dem Bereich des Parents */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 1;
+  user-select: none;
+
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.nav h1 {
+  position: relative;
+  transition: 0.6s;
+}
+
+
+
+
+.nav ul {
+  position: relative;
+  display: flex;
+  justify-content: center;  /* Horizontale Position */
+  align-items: center;      /* Vertikale Position */
+}
+
+.nav ul li {
+  position: relative;
+  list-style: none;
+}
+
+.nav ul li a {
+  position: relative;
+  margin: 0 15px;
+  padding: 0.6vh;
+  text-decoration: none;
+  color: var(--text-color);
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+}
+
+/* ------------ Cursor für die Wartungarbeiten :) ---------------- */
+
+.nav ul li:nth-last-child(-n+3) a {
+  cursor: not-allowed;
+}
+
+
+/* ---------------------------- */
+
+
+a:hover {
+  text-shadow:
+  0px 0px 2.2px rgba(255, 255, 255, 0.5), /*  Horizontaler Abstand, Vertikaler ..., Weichheit (2px) und Opacity von 0.5 */
+  0px 0px 5.3px rgb(255, 255, 255, 0.5),
+  0px 0px 10px rgb(255, 255, 255, 0.5),
+  0px 0px 17.9px rgb(255, 255, 255, 0.5),
+  0px 0px 33.4px rgb(255, 255, 255, 0.5),
+  0px 0px 80px rgb(255, 255, 255, 0.5);
+}
+
+a::before {    
+  content: '';    /*  Leeres Element */
+  position: absolute; /* Nimmt nicht platz ein, überlappt */
+  width: 100%;
+  height: 3.5px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  bottom: 0;    /*  Bottom 0 beim a-Tag */
+  left: 0;      /*  Left auf 0 beim a-Tag */
+  transform-origin: right;     /*  Bewegungsrichtung nach Rechts beim Nicht-Hovern */
+  transform: scaleX(0%);    /* Wie viel % soll von den 100% des a-Tag eingenommen werden? */
+  transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(100%);
+}
+
+.nav.scrolled a:hover::before {
+  background-color: var(--primary-color);
+}
+
+.nav.scrolled {
+  padding: 10px 100px;  /*  Höhe des Elements (Nav Scroll), Abstand nach links und rechts */
+  background: white;
+
+
+  box-shadow: 0px 1px 2px rgba(100, 245, 255, 0.5), /*  Horizontaler Abstand, Vertikaler ..., Weichheit (2px) und Opacity von 0.5 */
+  0px 2px 4px rgba(100, 245, 255, 0.5), /*  Verschiede Layer für den Übergang */
+  0px 4px 8px rgba(100, 245, 255, 0.5), 
+  0px 8px 16px rgba(100, 245, 255, 0.5);
+}
+
+.nav.scrolled ul li a {
+  color: black;
+}
+
+.nav.scrolled h1 {
+  color: black;
+}
+
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/2.jpg);
+  background-size: cover;
+  z-index: 0;
+}
+
+
+
+
+
+.banner::before {
+  content: "";
+  background-image: url(../img/2.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100%;
+  inset: 0;
+  filter: blur(0);
+  transition: filter 0.5s ease-out;
+  z-index: -1;
+}
+
+.banner--scroll::before {
+  filter: blur(1rem);
+}
+
+
+.banner::after {
+  content: "";  /*  Erstellt ein leeren Inhalt zum Stilen */
+  height: 100%;
+  position: absolute;
+  inset: 0;  /* Setzt alle vier Seiten auf 0 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) -5%, rgba(255, 255, 255, 1) 150%);
+  transition: 0.8s;
+  opacity: 1; /* Sichtbarkeit 1 = 100% */
+}
+
+
+.banner--scroll::after {
+  opacity: 0;
+}
+
+
